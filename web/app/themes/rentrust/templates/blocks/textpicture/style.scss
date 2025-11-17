@@ -1,0 +1,81 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+TEXT PICTURE COMPONENT
+------------------------------- */
+.cbo-textpicture {
+  .textpicture-picture{
+    border-radius:  $borderstandard;
+    padding-bottom: 65%;
+    margin-bottom: 1.875rem;
+    overflow: hidden;
+  }
+
+  .textpicture-content{
+    .content-uptitle{
+      margin-bottom: 0.875rem;
+    }
+    .content-title {
+      margin-bottom: 1.875rem;
+    }
+    .button-container{
+      margin-top: 2.5rem;
+    }
+  }
+}
+
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width: $screen-md-min) {
+  .cbo-textpicture {
+    .textpicture-inner{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .textpicture-picture{
+      width: 43%;
+      margin-bottom: 0;
+      padding-bottom: 40%;
+    }
+    .textpicture-content {
+      width: 48%;
+      padding: 0 0 0 2.5rem;
+
+      .button-container{
+        margin-top: 1.875rem;
+      }
+    }
+    &.textpicture--reverse{
+      .textpicture-inner{
+        flex-direction: row-reverse;
+      }
+      .textpicture-content {
+        padding: 0 2.5rem 0 0;
+      }
+    }
+  }
+}
+/* -------------------------------
+LARGE SCREENS
+------------------------------- */
+@media (min-width: $screen-lg-min) {
+  .cbo-textpicture {
+    .textpicture-picture{
+      width: 50%;
+      padding-bottom: 33%;
+      min-height: 28.125rem;
+    }
+    .textpicture-content {
+      width: 50%;
+      padding: 0 0 0 4.5rem;
+    }
+    &.textpicture--reverse{
+      .textpicture-content {
+        padding: 0 4.5rem 0 0;
+      }
+    }
+  }
+}

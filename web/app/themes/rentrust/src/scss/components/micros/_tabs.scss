@@ -1,0 +1,85 @@
+/* -------------------------------
+TABS MICRO COMPONENT
+------------------------------- */
+.cbo-tabs{
+	.tabs-filter{
+		margin-bottom: 3.125rem;
+		width: 100%;
+
+		.filter-list{
+			background: $colorwhite;
+			border-radius: $bordersmall;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 0.625rem 0.3125rem;
+			width: fit-content;
+
+			.list-el{
+				height: 3.75rem;
+				display: flex;
+				margin: 0 0.3125rem;
+				width: 100%;
+
+				.filter-btn{
+					color: $colorbluedark;
+					padding: 0 1.25rem;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					border-radius: $bordersmall;
+					font-size: 1rem;
+					font-weight: bold;
+					cursor: pointer;
+					width: 100%;
+					transition: all .4s;
+
+					&.is-active,
+					&:hover{
+						background: $colored;
+						color: $colorwhite;
+					}
+				}
+			}
+		}
+	}
+
+	.tabs-content{
+		.content-panel {
+			display: none;
+			flex-wrap: wrap;
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			transition: all .4s;
+
+			&.panel--active{
+				display: flex;
+				opacity: 1;
+				visibility: visible;
+				pointer-events: all;
+			}
+		}
+	}
+}
+
+/* -------------------------------
+SMALL SCREENS
+------------------------------- */
+@media (min-width:$screen-sm-min) {
+	.cbo-tabs{
+		.tabs-filter{
+			.filter-list{
+				border-radius: 99rem;
+
+				.list-el{
+					width: auto;
+
+					.filter-btn{
+						width: auto;
+						border-radius: 99rem;
+					}
+				}
+			}
+		}
+	}
+}

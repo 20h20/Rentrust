@@ -1,0 +1,107 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+BLOCS SIMPLE COMPONENT
+------------------------------- */
+.cbo-blocs{
+  background: $colorbeige;
+  border-radius: $borderstandard;
+  overflow: hidden;
+  position: relative;
+
+  &:after{
+    content: '';
+    background: url(../../img/keyhand.png) no-repeat;
+    position: absolute;
+    top: -1.625rem;
+    right: 1.25rem;
+    width: 8.25rem;
+    height: 6.25rem;
+    background-size: contain;
+  }
+  .blocs-title{
+    margin-bottom: 1.875rem;
+  }
+  .blocs-chapo{
+    max-width: 50rem;
+    margin-bottom: 3.125rem;
+  }
+  .blocs-list{
+    .list-el{
+      margin: 2.5rem 0;
+
+      .el-inner{
+        border-left: 0.0625rem solid rgba($colorbluedark, .4);
+        padding-left: 0.875rem;
+
+        .inner-title{
+          margin-bottom: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+/* -------------------------------
+SMALL SCREENS
+------------------------------- */
+@media (min-width:$screen-sm-min) {
+  .cbo-blocs{
+    .blocs-list{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 1.875rem -1.25rem 0 -1.25rem;
+
+      .list-el{
+        width: 50%;
+        margin: 1.25rem 0;
+        padding: 0 1.25rem;
+
+        .el-inner{
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width:$screen-md-min) {
+  .cbo-blocs{
+    border-radius: $borderbig;
+
+    &:after{
+      top: -2.25rem;
+      right: 1.25rem;
+      width: 12.5rem;
+      height: 9.4375rem;
+    }
+    .blocs-list{
+      .list-el{
+        width: 33.333333%;
+      }
+    }
+  }
+}
+
+/* -------------------------------
+LARGE SCREENS
+------------------------------- */
+@media (min-width:$screen-lg-min) {
+  .cbo-blocs{
+    &:after{
+      top: -3.25rem;
+      right: 10%;
+      width: 16.25rem;
+      height: 12.25rem;
+    }
+    .blocs-list{
+      .list-el{
+        width: 25%;
+      }
+    }
+  }
+}

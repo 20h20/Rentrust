@@ -1,0 +1,286 @@
+/* -------------------------------
+FOOTER COMPONENT
+------------------------------- */
+footer{
+   background: $colorbluedark;
+   color: $colorwhite;
+   border-radius: $borderstandard $borderstandard 0 0;
+
+   .footer-inner.cbo-container{
+      padding-bottom: 0;
+   }
+   a{
+      color: $colorwhite;
+      transition: all .4s;
+
+      &:hover{
+         opacity: 1;
+      }
+   }
+   .footer-content{
+      .footer-col{
+         margin-bottom: 1.875rem;
+
+         &:last-child{
+            margin-bottom: 0;
+         }
+         &.footer-logo{
+            text-align: center;
+
+            .logo-picture{
+               display: block;
+               width: 8.5rem;
+               height: 5.125rem;
+               margin: 0 auto 1.875rem auto;
+            }
+         }
+         &.col--nav{
+            margin-top: 3.125rem;
+   
+            .footer-title{
+               font-weight: bold;
+               display: flex;
+               justify-content: space-between;
+               padding-bottom: 0.875rem;
+               margin-bottom: 0.875rem;
+               border-bottom: 0.0625rem solid rgba($colorwhite, .4);
+
+               i{
+                  transition: all .4s;
+               }
+            }
+            .col-inner{
+               display: none;
+
+               .footer-nav{
+                  ul{
+                     li{
+                        margin: 0.625rem 0;
+
+                        .sub-menu{
+                           margin: 1rem 0 1.875rem 0;
+                           opacity: .6;
+                           font-size: 0.875rem;
+                        }
+                     }
+                  }
+               }
+            }
+            &.col--open{
+               .footer-title{
+                  i{
+                     transform: rotate(90deg);
+                  }
+               }
+               .col-inner{
+                  display: block;
+               }
+            }
+         }
+
+         &.col--socials{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-wrap: wrap;
+            margin-top: 3.75rem;
+
+            .footer-title{
+               width: 100%;
+            }
+            .socials-list{
+               margin-top: 0.625rem;
+               display: flex;
+
+               .list-el{
+                  box-shadow: 0 0 0 0 $colorwhite inset;
+                  color: $colorbluedark;
+                  border-radius: 0.3125rem;
+                  background: $colorwhite;
+                  width: 2.25rem;
+                  height: 2.25rem;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin: 0 0.625rem;
+                  font-size: 1.25rem;
+                  transition: all .4s;
+
+                  &:hover{
+                     box-shadow: 0 0 0 0.0625rem $colorwhite inset;
+                     background: none;
+                     color: $colorwhite;
+                  }
+               }
+            }
+         }
+      }
+   }
+   .footer-bottom{
+      margin-top: 4.375rem;
+      border-top: 0.0625rem solid rgba($colorwhite, .3);
+      padding: 1.25rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 0.75rem;
+      line-height: 0.75rem;
+      color: rgba($colorwhite, .3);
+
+      a{
+         color: rgba($colorwhite, .3);
+         transition: all .4s;
+
+         &:hover{
+            color: rgba($colorwhite, 1);
+         }
+      }
+      nav{
+         margin-top: 0.625rem;
+         width: 100%;
+
+         ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            li{
+               position: relative;
+
+               &:before{
+                  content: '|';
+                  margin: 0 0.375rem;
+               }
+            }
+         }
+      }
+   }
+}
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width: $screen-md-min){
+   footer{
+      border-radius: $borderbig $borderbig 0 0;
+
+      .footer-content{
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         margin: 0 -0.625rem;
+
+         .footer-navwrap{
+            display: flex;
+            flex: 1;
+            justify-content: center;
+         }
+         .footer-col{
+            margin-bottom: 0;
+            padding: 0 0.625rem;
+
+            &.footer-logo{
+               width: 100%;
+               margin-bottom: 2.5rem;
+            }
+            &.col--nav{
+               margin: 0;
+
+               .footer-title{
+                  display: none;
+               }
+               .col-inner{
+                  display: block;
+
+                  .footer-nav{
+                     ul{
+                        display: flex;
+
+                        li{
+                           margin: 0;
+                           padding: 0 2.5rem;
+
+                           & > a{
+                              font-size: 1.25rem;
+                           }
+                           &:first-child{
+                              margin-top: 0;
+                           }
+                           .sub-menu{
+                              margin-bottom: 0;
+                              display: block;
+
+                              li{
+                                 padding: 0;
+                                 margin: 0.625rem 0;
+
+                                 a{
+                                    font-size: 0.875rem;
+                                 }
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+            &.col--socials{
+               margin-top: 0;
+               text-align: left;
+               display: block;
+
+               .socials-list {
+                  margin-top: 1.25rem;
+
+                  .list-el{
+                     margin: 0 0.625rem 0 0;
+                  }
+               }
+            }
+         }
+      }
+      .footer-bottom{
+         justify-content: space-between;
+
+         nav{
+            margin-top: 0;
+            width: auto;
+
+            ul{
+               li{
+                  &:first-child{
+                     &:before{
+                       display: none;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+/* -------------------------------
+LARGE SCREENS
+------------------------------- */
+@media (min-width: $screen-lg-min){
+   footer{
+      .footer-inner.cbo-container{
+         padding-top: 4.375rem;
+      }
+      .footer-content{
+         .footer-navwrap{
+            justify-content: end;
+         }
+         .footer-col{
+            &.footer-logo{
+               max-width: 25rem;
+               text-align: left;
+               margin-bottom: 0;
+
+               .logo-picture{
+                  margin: 0 0 1.875rem 0;
+               }
+            }
+         }
+      }
+   }
+}

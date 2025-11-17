@@ -1,0 +1,139 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+FILTERS MICRO COMPONENT
+------------------------------- */
+.cbo-filters{
+	margin-bottom: 3.125rem;
+	width: 100%;
+	position: relative;
+	z-index: 3;
+
+	.filters-menu{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		border-radius: 99rem;
+		height: 3.75rem;
+		background: $colorbeige;
+		color: $colorbluedark;
+		position: relative;
+		cursor: pointer;
+
+		&:after{
+			content: '';
+			display : inline-block;
+			height : 0;
+			width : 0;
+			border-top : 0.5625rem solid $colorbluedark;
+			border-right : 0.3125rem solid transparent;
+			border-left : 0.3125rem solid transparent;
+			position: absolute;
+			right: 1.25rem;
+			transition: all .3s ease-in-out;
+		}
+		&.filters-menu-click{
+			&:after{
+				transform: rotate(180deg);
+			}
+		}
+	}
+	.filters-list{
+		background: $colorbeige;
+		box-shadow: 0 0.25rem 2.5rem 0 rgba($colorblack, .1);
+		top: 3.75rem;
+		width: calc(100% - 2.5rem);
+		left: 1.25rem;
+		opacity: 0;
+		border-radius: $bordersmall;
+		visibility: hidden;
+		position: absolute;
+		transition: all .3s ease-in-out;
+
+		.list-el{
+			padding: 0 1.25rem;
+			display: flex;
+
+			.el-inner{
+				color:$colorbluedark;
+				display: block;
+				text-align: center;
+				padding: 0.625rem 0;
+				width: 100%;
+			}
+			select{
+				background: none;
+ 				margin: 0.3125rem auto;
+				border: 0.0625rem solid $colorbluedark;
+				border-radius: 0.3125rem;
+			}
+			&.el--active{
+				.el-inner{
+					color:$colored;
+				}
+			}
+		}
+		&.list--open{
+			opacity: 1;
+			visibility:visible;
+			top: 4.375rem;
+		}
+	}
+}
+/* -------------------------------
+SMALL SCREENS
+------------------------------- */
+@media (min-width: $screen-sm-min){
+	.cbo-filters{
+		margin-bottom: 2.5rem;
+
+		.filters-inner{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.filters-menu{
+			display: none;
+		}
+		.filters-list{
+			top: 0;
+			left: 0;
+			visibility: visible;
+			opacity: 1;
+			position: relative;
+			box-shadow: none;
+			display: flex;
+			border-radius: 99rem;
+			height: 5rem;
+			padding: 0.625rem;
+			width: fit-content;
+
+			.list-el{
+				height: 100%;
+				padding: 0;
+
+				.el-inner{
+					color: $colorbluedark;
+					padding: 0 1.25rem;
+					height: 100%;
+					display: flex;
+					align-items: center;
+					border-radius: 99rem;
+					font-size: 1rem;
+					font-weight: bold;
+					transition: all .4s;
+				}
+				&.el--active,
+				&:hover{
+					.el-inner{
+						background: $colored;
+						color: $colorwhite;
+					}
+				}
+			}
+			&.list--open {
+				top: 0;
+			}
+		}
+	}
+}

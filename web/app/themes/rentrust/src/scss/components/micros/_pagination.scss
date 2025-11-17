@@ -1,0 +1,79 @@
+/* -------------------------------
+PAGINATION MICRO COMPONENT
+------------------------------- */
+.cbo-pagination{
+	margin-top: 2.5rem;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	width: 100%;
+	
+	li{
+		margin: 0 0.3125rem;
+
+		a{
+			color: $colorbluedark;
+			box-shadow: 0 0 0 0 $colored inset;
+			background: rgba($colored, .1);
+			position: relative;
+			border-radius: 99rem;
+			width: 2.5rem;
+			height: 2.5rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.4s cubic-bezier(0.85, 0, 0.15, 1) 0s;
+		}
+		&:hover{
+			a{
+				color: $colorwhite;
+				box-shadow: 0 0 0 1.875rem $colored inset;
+			}
+		}
+		&.disabled{
+			display: none;
+		}
+		&.cbo-paginate-prev,
+		&.cbo-paginate-next{
+			a{
+				i{
+					font-size: 0.875rem;
+				}
+			}
+		}
+		&.cbo-paginate-prev{
+			a{
+				i{
+					transform: rotate(180deg);
+				}
+			}
+		}
+		&.active{
+			a{
+				background: $colored;
+				color: $colorwhite;
+				cursor: not-allowed;
+			}
+		}
+		&.cbo-paginate-prev,
+		&.cbo-paginate-next{
+			a{
+				background: $colored;
+				color: $colorwhite;
+				transition: all .4s;
+
+				&:hover{
+					opacity: .6;
+				}
+			}
+		}
+	}
+}
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width: $screen-md-min) {
+	.cbo-pagination{
+		margin-top: 3.4375rem;
+	}
+}

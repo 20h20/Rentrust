@@ -1,0 +1,166 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+ARTICLE BLOC MICRO COMPONENT
+------------------------------- */
+.articles-list{
+	margin-top: 3.125rem;
+
+	.list-el{
+		margin: 1.25rem 0;
+		width: 100%;
+ 
+		.el-inner{
+			overflow: hidden;
+			height: 100%;
+			background: $colorwhite;
+			box-shadow: 0 0 0.5rem 0 rgba($colorblack, .2);
+			border-radius: $borderstandard;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			flex-direction: column;
+			color: $colorbluedark;
+
+			.el-picture{
+				position: relative;
+				display: block;
+				padding-bottom: 51%;
+				overflow: hidden;
+
+				&.picture--none{
+					background: $colorbluedark;
+
+					img{
+						width: 8.125rem;
+						height: auto;
+						top: 50%;
+						left: 50%;
+						margin: -2.1875rem 0 0 -4.0625rem;
+					}
+				}
+			}
+			.el-content{
+				padding: 1.25rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				flex: 1;
+
+				.content-top{
+					display: block;
+
+					.content-category{
+						margin: -0.3125rem;
+						display: flex;
+
+						.cbo-tag{
+							margin: 0.3125rem;
+						}
+					}
+					.content-title{
+						margin: 1.25rem 0 0.625rem 0;
+						font-weight: 500;
+					}
+					.content-text{
+						display: block;
+					}
+				}
+				.content-link{
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+
+/* -------------------------------
+SMALL SCREENS
+------------------------------- */
+@media (min-width: $screen-sm-min) {
+	.articles-list{
+		display: flex;
+		flex-wrap: wrap;
+		margin: 2.5rem -0.625rem -0.625rem -0.625rem;
+
+		.list-el{
+			margin: 0.625rem 0;
+			padding: 0 0.625rem;
+			width: 50%;
+		}
+	}
+}
+
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width: $screen-md-min) {
+	.articles-list{
+		margin: 3.4375rem -0.9375rem -0.9375rem -0.9375rem;
+
+		.list-el{
+			width: 33.33333%;
+			padding: 0 0.9375rem;
+			margin: 0.9375rem 0;
+
+			.el-inner{
+				.el-picture{
+					&:after{
+						content: '';
+						background: linear-gradient(195deg,rgba($coloredark,.8),rgba($coloredlight,.8) 15%,rgba($colored,.6));
+						width: 100%;
+						height: 100%;
+						left: 0;
+						top: 0;
+						position: absolute;
+  						transition: all .35s cubic-bezier(.3,.71,0,1);
+						opacity: 0;
+					}
+				}
+			}
+			&:hover{
+				.el-inner{
+					.el-picture{
+						&:after{
+							opacity: 1;
+						}
+					}
+					.el-content{
+						.content-link {
+							.link-inner {
+								&:after{
+									width: 100%;
+								}
+								.link-txt {
+									opacity: 1;
+									transform: translate(0);
+									transition-delay: 0.2s;
+								}
+								i {
+									transform: translate(-0.1875rem);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* -------------------------------
+LARGE SCREENS
+------------------------------- */
+@media (min-width: $screen-xl-min) {
+	.articles-list{
+		.list-el{
+			width: 25%;
+
+			.el-inner {
+				.el-content{
+					padding: 1.25rem 1.875rem;
+				}
+			}
+		}
+	}
+}

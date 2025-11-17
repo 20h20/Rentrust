@@ -1,0 +1,128 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+TABLE COMPONENT
+------------------------------- */
+.cbo-table{
+  .table-title{
+    text-align: center;
+    margin-bottom: 3.125rem;
+  }
+  .table-header,
+  .table-footer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+
+    .header-row,
+    .footer-row{
+      width: 6.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2.25rem 0;
+      font-weight: bold;
+
+      &.row--featured{
+        background: $colored;
+        color: $colorwhite;
+        border-radius: $bordersmall $bordersmall 0 0;
+      }
+    }
+  }
+
+  .table-header{
+    border-bottom: 0.0625rem solid rgba($colorbluedark, .1);
+
+    .header-row{
+      &.row--featured{
+        border-radius: $bordersmall $bordersmall 0 0;
+      }
+    }
+  }
+
+  .table-footer{
+    .footer-row{
+      &.row--featured{
+        border-radius: 0 0 $bordersmall $bordersmall;
+      }
+      .cbo-button{
+        min-width: auto;
+      }
+    }
+  }
+
+  .table-body{
+    .table-row{
+      display: flex;
+
+      .table-cell{
+        padding: 2.25rem 0;
+        width: auto;
+        min-width: 6.25rem;
+        border-bottom: 0.0625rem solid rgba($colorbluedark, .1);
+
+        &:first-child{
+            flex: 1;
+        }
+        &.cell--featured{
+          background: $colored;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 0.0625rem solid rgba($colorwhite, .2);
+
+          i{
+            color: $colorwhite;
+            font-size: 1.875rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* -------------------------------
+SMALL SCREENS
+------------------------------- */
+@media (min-width: $screen-sm-min) {
+  .cbo-table{
+    .table-header,
+    .table-footer{
+      .header-row,
+      .footer-row{
+        width: 12.5rem;
+      }
+    }
+    .table-body{
+      .table-row{
+        .table-cell{
+          width: 12.5rem;
+        }
+      }
+    }
+  }
+}
+
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width: $screen-md-min) {
+  .cbo-table{
+    .table-header,
+    .table-footer{
+      .header-row,
+      .footer-row{
+        width: 14.375rem;
+      }
+    }
+    .table-body{
+      .table-row{
+        .table-cell{
+          width: 14.375rem;
+        }
+      }
+    }
+  }
+}

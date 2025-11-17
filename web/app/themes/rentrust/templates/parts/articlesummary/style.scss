@@ -1,0 +1,141 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+SUMMARY ARTICLE COMPONENT
+------------------------------- */
+.cbo-articlesummary{
+	position: sticky;
+	top: 5.9375rem;
+	z-index: 2;
+
+	&.articlesummary--open{
+		.articlesummary-inner{
+			.inner-content{
+				.articlesummary-title{
+					i{
+						transform: rotate(0deg);
+					}
+				}
+				.articlesummary-wrap{
+					opacity: 1;
+					visibility: visible;
+					pointer-events: all;
+					transform: translateY(1.125rem);
+				}
+			}
+		}
+	}
+	.articlesummary-inner{
+		.inner-content{
+			position: relative;
+
+			.articlesummary-title{
+				width: 100%;
+				display: inline-flex;
+				align-items: center;
+				justify-content: space-between;
+				border: 0.0625rem solid rgba($colored, .3);
+				background: rgb(247, 231, 230);
+				border-radius: $bordersmall;
+				padding: 1.25rem;
+				position: relative;
+
+				i{
+					transform: rotate(-90deg);
+					font-size: 0.75rem;
+					transition: all .4s;
+				}
+			}
+			.articlesummary-wrap{
+				border: 0.0625rem solid rgba($colored, .3);
+				background: rgb(247, 231, 230);
+				border-radius: $bordersmall;
+				position: absolute;
+				padding: 1.25rem;
+				width: 100%;
+				left: 0;
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+				transform: translateY(3.125rem);
+				transition: all .4s;
+
+				.articlesummary-list{
+					li{
+						padding: 0.625rem 0;
+
+						a{
+							color: $colorbluedark;
+							font-weight: 500;
+							transition: all .4s;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width: $screen-md-min){
+	.cbo-articlesummary{
+		position: relative;
+		top: 0;
+
+		&.articlesummary--open{
+			.articlesummary-inner{
+				.inner-content{
+					.articlesummary-title{
+						i{
+							display: none;
+						}
+					}
+				}
+			}
+		}
+		.articlesummary-inner{
+			.inner-content{
+				border: 0.0625rem solid rgba($colored, .3);
+				background: rgb(247, 231, 230);
+				border-radius: $bordersmall;
+				padding: 1.25rem;
+
+				.articlesummary-title{
+					border: 0;
+					background: none;
+					padding: 0;
+				}
+				.articlesummary-wrap{
+					position: relative;
+					padding: 0;
+					border: 0;
+					background: none;
+					
+					.articlesummary-list{
+						li{	
+							a{
+								&:hover{
+									color: $colored;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* -------------------------------
+LARGE SCREENS
+------------------------------- */
+@media (min-width: $screen-lg-min){
+	.cbo-articlesummary{
+		.articlesummary-inner.cbo-container{
+			margin-top: 3.125rem;
+			margin-bottom: -3.125rem;
+		}
+	}
+}

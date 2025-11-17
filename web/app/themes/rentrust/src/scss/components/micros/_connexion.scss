@@ -1,0 +1,38 @@
+/* -------------------------------
+CONNEXION COMPONENT
+------------------------------- */	
+.login{
+	padding: 0;
+	display: flex;
+
+	a,
+	label{
+		color:$colorbluedark;
+	}
+	h1{
+		a{
+			background: url("../img/logo-rentrust-black.svg") no-repeat center;
+			background-size: contain;
+			width: 7.5rem;
+		}
+	}
+	form .input{
+		border:0.0625rem solid $colored;
+	}
+	.button.button-large{
+		background: $colored;
+		border: 0rem;
+		margin-top: 1.875rem;
+		width: 100%;
+	}
+	form .input{
+		border-radius: 0rem;
+	}
+	.language-switcher{
+		display: none;
+	}
+	.notice-info,
+	.notice-error{
+		color: $colorbluedark;
+	}
+}

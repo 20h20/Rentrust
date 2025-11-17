@@ -1,0 +1,136 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+ACCORDION PICTURE COMPONENT
+------------------------------- */
+.cbo-accordionpicture {
+  .accordionpicture-picture{
+    border-radius:  $borderstandard;
+    padding-bottom: 65%;
+    margin-bottom: 1.875rem;
+    overflow: hidden;
+  }
+
+  .accordionpicture-content{
+    .content-title {
+      margin-bottom: 1.875rem;
+    }
+    .content-text{
+      margin-bottom: 1.875rem;
+    }
+    .accordionpicture-list{
+      width: 100%;
+
+      .list-el{
+        padding: 1.25rem;
+        margin: 1.25rem 0;
+        border-radius: 0.625rem;
+        background: rgba($colorbeige, .5);
+        transition:.4s $easeinout;
+
+        &:first-child{
+          margin-top: 0;
+        }
+        &:last-child{
+          margin-bottom: 0;
+        }
+        .el-wrapper{
+          .el-title{
+            text-align: left;
+            transition:.4s $easeinout;
+          }
+        }
+        .el-content{
+          overflow: hidden;
+          height: 0;
+          transition:.4s $easeinout;
+        }
+
+        &.el--open{
+          background: rgba($colorbeige, 1);
+
+          .el-wrapper{
+            .el-title{
+              color: $colored;
+            }
+          }
+          .el-content{
+            height: auto;
+            padding-top: 1.25rem;
+          }
+        }
+      }
+    }
+    .button-container{
+      margin-top: 2.5rem;
+    }
+  }
+}
+
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width: $screen-md-min) {
+  .cbo-accordionpicture {
+    .accordionpicture-inner{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .accordionpicture-picture{
+      width: 45%;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .accordionpicture-content {
+      width: 55%;
+      padding: 0 0 0 2.5rem;
+
+      .accordionpicture-list{
+        .list-el{
+          &:hover{
+            background: rgba($colorbeige, 1);
+
+            .el-wrapper{
+              .el-title{
+                  color: $colored;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.accordionpicture--reverse{
+      .accordionpicture-inner{
+        flex-direction: row-reverse;
+      }
+      .accordionpicture-content {
+        padding: 0 2.5rem 0 0;
+      }
+    }
+  }
+}
+
+/* -------------------------------
+LARGE SCREENS
+------------------------------- */
+@media (min-width: $screen-lg-min) {
+  .cbo-accordionpicture {
+    .accordionpicture-picture{
+      width: 50%;
+      min-height: 28.125rem;
+    }
+    .accordionpicture-content {
+      padding: 0 0 0 4.5rem;
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    &.accordionpicture--reverse{
+      .accordionpicture-content {
+        padding: 0 4.5rem 0 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+/* -------------------------------
+CONTAINER MICRO COMPONENT
+------------------------------- */
+.cbo-container {
+  margin: 4.375rem auto;
+  max-width: 109.625rem;
+  padding: 0 1.25rem;
+  position: relative;
+  width: 100%;
+
+  &.container--nomargin{
+    margin: 0 auto;
+  }
+  &.container--padding {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 4.375rem;
+    padding-bottom:4.375rem;
+  }
+  &.container--medium{
+    max-width: 93.75rem;
+  }
+  &.container--small{
+    max-width: 80.625rem;
+  }
+  &.container--xsmall{
+    max-width: 65rem;
+  }
+}
+
+/* -------------------------------
+SMALL SCREENS
+------------------------------- */
+@media (min-width: $screen-sm-min) {
+  .cbo-container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+/* -------------------------------
+LARGE SCREENS
+------------------------------- */
+@media (min-width: $screen-lg-min) {
+  .cbo-container {
+    margin: 8.75rem auto;
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
+
+    &.container--padding {
+      padding-top: 8.75rem;
+      padding-bottom: 8.75rem;
+    }
+  }
+}

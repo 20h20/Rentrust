@@ -1,0 +1,120 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+ACCORDION SECTION COMPONENT
+------------------------------- */
+.cbo-accordion{
+	&.accordion--beige{
+		background: $colorbeige;
+		border-radius: $borderstandard;
+	}
+
+	.accordion-title{
+		text-align: center;
+		margin-bottom: 2.5rem;
+	}
+	.accordion-chapo{
+		text-align: center;
+	}
+	.accordion-list{
+		margin: 3.75rem auto 0 auto;
+		max-width: 59.375rem;
+
+		.list-el{
+			background: $colorwhite;
+			border: 0.0625rem solid $colorgrey;
+			border-radius: $borderstandard;
+			margin: -1.875rem 0 0;
+			padding: 1.25rem 1.25rem 3.125rem;
+ 			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			transition: all .4s;
+
+			&:first-child{
+				margin: 0;
+			}
+			&:last-child{
+				padding-bottom: 1.25rem;
+			}
+			.el-wrapper{
+				width: 100%;
+
+				.el-title{
+					width: 100%;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					text-align: left;
+					cursor: pointer;
+					transition:.4s $easeinout;
+	
+					i{
+						background: $colorwhite;
+						box-shadow: 0 0 0 0.0625rem $colorbluedark inset;
+						border-radius: 99rem;
+						width: 3.125rem;
+						min-width: 3.125rem;
+						height: 3.125rem;
+						margin-left: 1.25rem;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						transition:.4s $easeinout;
+						font-size: 1rem;
+						color: $colorbluedark;
+					}
+				}
+			}
+			.el-content{
+				overflow: hidden;
+				height: 0;
+				transition:.4s $easeinout;
+
+				.content-button{
+					margin-top: 1.875rem;
+				}
+			}
+			&:hover,
+			&.el--open{
+				.el-title{
+					i{
+						transform:rotate(45deg);
+						color: $colorwhite;
+						box-shadow: 0 0 0 3.125rem $colorbluedark inset;
+					}
+				}
+			}
+			&.el--open{
+				.el-content{
+					padding-top: 2rem;
+					height: auto;
+				}
+			}
+		}
+	}
+}
+
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width:$screen-md-min) {
+	.cbo-accordion{
+		&.accordion--beige{
+			border-radius: $borderbig;
+		}
+	}
+}
+
+/* -------------------------------
+LARGE SCREENS
+------------------------------- */
+@media (min-width:$screen-lg-min) {
+	.cbo-accordion{
+		.accordion-list{
+			.list-el{
+				padding: 1.25rem 3rem 2.875rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,129 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+ACCORDION SECTION COMPONENT
+------------------------------- */
+.cbo-calculator{
+	background-image:linear-gradient(250deg,$coloredlight,$colored 50%,$coloredark);
+	border-radius: $borderstandard;
+	position: relative;
+	overflow: hidden;
+
+	.calculator-form{
+		border-radius: $borderstandard;
+		background: $colorwhite;
+		padding: 1.25rem;
+		margin-bottom: 1.875rem;
+
+		.form-title{
+			text-align: center;
+			margin-bottom: 1.875rem;
+		}
+		.form-inner{
+			.field--submit{
+				text-align: center;
+				margin-top: 2.5rem;
+			}
+		}
+	}
+	.calculator-list{
+		.list-el{
+			margin: 2.5rem 0;
+			color: $colorwhite;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+			.el-inner{
+				.el-picture {
+					width: 1.25rem;
+					height: 1.25rem;
+					display: block;
+					margin-bottom: 0.625rem;
+				}
+				.el-title{
+					margin-bottom: 0.625rem;
+				}
+			}
+		}
+	}
+}
+
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width:$screen-md-min) {
+	.cbo-calculator{
+		border-radius: $borderbig;
+
+		.calculator-inner.cbo-container{
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+		}
+		.calculator-form{
+			width: 45%;
+			margin-bottom: 0;
+			padding: 2.5rem 1.25rem;
+		}
+		.calculator-list{	
+			flex: 1;
+			padding-left: 5rem;
+		}
+	}
+}
+
+/* -------------------------------
+LARGE SCREENS
+------------------------------- */
+@media (min-width:$screen-lg-min) {
+	.cbo-calculator{
+		&:after{
+			content: '';
+			background: url(../../img/picture-cta.png) no-repeat;
+			position: absolute;
+			bottom: 0;
+			right: 2.5rem;
+			width: 7.4375rem;
+			height: 11.875rem;
+			background-size: contain;
+		}
+		.calculator-inner.cbo-container{
+			align-items: baseline;
+		}
+		.calculator-list{	
+			flex: 1;
+			margin: -0.9375rem;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+	
+			.list-el{
+				width: 50%;
+				margin: 0.9375rem 0;
+				padding: 0 0.9375rem;
+			}
+		}
+	}
+}
+
+/* -------------------------------
+XLARGE SCREENS
+------------------------------- */
+@media (min-width:$screen-xl-min) {
+	.cbo-calculator{
+		.calculator-form{
+			max-width: 35rem;
+			padding: 2.5rem;
+		}
+		.calculator-list{
+			margin-top: -1.875rem;
+			margin-bottom: -1.875rem;
+			padding-left: 9.375rem;
+
+			.list-el{
+				margin: 1.875rem 0;
+			}
+		}
+	}
+}

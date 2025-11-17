@@ -1,0 +1,88 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+HERO ARTICLE COMPONENT
+------------------------------- */
+.cbo-heroarticle{
+	position: relative;
+	color: $colorwhite;
+ 
+	&:after{
+		content: '';
+		background-image:linear-gradient(250deg,$coloredlight,$colored 50%,$coloredark);
+		border-radius: 0 0 $borderstandard $borderstandard;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: calc(100% - 7.625rem);
+	}
+	.heroarticle-inner.cbo-container{
+		position: relative; 
+		z-index: 2;
+		padding-bottom: 0;
+	}
+	.heroarticle-content{
+		max-width: 80.625rem;
+
+		.heroarticle-category{
+			margin: 0 -0.3125rem 1.875rem -0.3125rem;
+
+			.cbo-tag{
+				margin: 0 0.3125rem;
+				background: rgba($colorwhite, .1);
+				color: $colorwhite;
+				border: 0.0625rem solid $colorwhite;
+			}
+		} 
+		.heroarticle-text{
+			margin-top: 1.875rem;
+		}
+	}
+	.heroarticle-picture{
+		margin-top: 1.875rem;
+		border-radius: $bordersmall;
+		overflow: hidden;
+		padding-bottom: 62%;
+	}
+	.heroarticle-share{
+		margin-top: 1.875rem;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+
+		.share-title{
+			font-weight: bold;
+			font-size: 0.875rem;
+			margin-right: 0.875rem;
+		}
+		.share-el{
+			color: $colorwhite;
+			box-shadow: 0 0 0 2rem $colored inset;
+			border-radius: 99rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 2rem;
+			height: 2rem;
+			padding: 0.25rem;
+			transition: all .4s;
+
+			&:hover{
+				color: $colored;
+				box-shadow: 0 0 0 0.125rem $colored inset;
+			}
+		}
+	}
+}
+
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width: $screen-md-min){
+	.cbo-heroarticle{
+		&:after{
+			border-radius: 0 0 $borderbig $borderbig;
+		}
+	}
+}

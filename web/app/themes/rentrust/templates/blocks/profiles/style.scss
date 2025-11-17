@@ -1,0 +1,97 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+PROFILES COMPONENT
+------------------------------- */
+.cbo-profiles{
+  .profiles-inner.cbo-container{
+    overflow: hidden;
+  }
+  .profiles-title{
+    text-align: center;
+    margin-bottom: 1.875rem;
+  }
+  .profiles-chapo{
+    text-align: center;
+    margin: 0 auto 3.125rem;
+    max-width: 50rem;
+  }
+  .profiles-list{
+    &:not(.slick-slider){
+      display: flex;
+      flex-wrap: nowrap;
+      overflow: hidden;
+
+      .list-el{
+        width: 33.333333%;
+        min-width: 33.333333%;
+        height: auto;
+      }
+    }
+    .slick-list{
+      overflow: visible;
+
+      .slick-slide{
+        width: max-content !important;
+      }
+    }
+    &.reverse{
+      transform: scaleX(-1);
+
+      .list-el {
+        transform: scaleX(-1);
+      }
+    }
+    .list-el{
+      padding: 0.5rem;
+
+      .el-inner{
+        display: flex;
+
+        .inner-picture{
+          border-radius: $bordersmall;
+          height: 3.125rem;
+          width: 3.125rem;
+          min-width: 3.125rem;
+          overflow: hidden;
+          margin-right: 0.625rem;
+        }
+        .inner-text{
+          border-radius: $bordersmall;
+          background: $colorbeige;
+          height: 3.125rem;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0 0.625rem;
+          font-size: 1rem;
+          font-weight: 500;
+          width: max-content;
+        }
+      }
+    }
+  }
+}
+
+/* -------------------------------
+LARGE SCREENS
+------------------------------- */
+@media (min-width:$screen-lg-min) {
+  .cbo-profiles{
+    overflow: hidden;
+
+    .profiles-inner.cbo-container{
+      overflow: visible;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .profiles-list{
+      &:not(.slick-slider){
+        .list-el{
+          width: 20%;
+          min-width: 20%;
+        }
+      }
+    }
+  }
+}

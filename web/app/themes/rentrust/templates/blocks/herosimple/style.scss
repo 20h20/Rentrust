@@ -1,0 +1,46 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+HERO SIMPLE COMPONENT
+------------------------------- */
+.cbo-herosimple{
+    background-image:linear-gradient(250deg,$coloredlight,$colored 50%,$coloredark);
+    border-radius: 0 0 $borderstandard $borderstandard;
+    color: $colorwhite;
+
+    .herosimple-content{
+        max-width: 56.25rem;
+
+        .herosimple-title{
+            .title-page{
+                display: block;
+                font-size: 0.875rem;
+                line-height: 1.625rem;
+            }
+        }
+       
+        .herosimple-text{
+            margin-top: 1.875rem;
+        }
+    }
+}
+
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width: $screen-md-min){
+    .cbo-herosimple{
+        border-radius: 0 0 $borderbig $borderbig;
+    }
+}
+
+/* -------------------------------
+LARGE SCREENS
+------------------------------- */
+@media (min-width: $screen-lg-min){
+    .cbo-herosimple{
+        .cbo-container.container--padding{
+            padding-bottom: 6.25rem;
+        }
+    }
+}

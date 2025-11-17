@@ -20,7 +20,7 @@ web/app/uploads-webpc/
 
 # Theme
 web/app/themes/*
-!web/app/themes/scenofonia
+!web/app/themes/rentrust
 
 
 # Logs

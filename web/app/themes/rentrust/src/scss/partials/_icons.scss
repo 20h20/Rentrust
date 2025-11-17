@@ -1,0 +1,40 @@
+// Custom template
+
+@font-face {
+    font-family:"icons";
+    src: url("../iconfont/icons.eot?afe1c826d042e52ce62b9f566ba7e84f");
+    src: url("../iconfont/icons.eot?afe1c826d042e52ce62b9f566ba7e84f#iefix") format("embedded-opentype"),
+		url("../iconfont/icons.woff?afe1c826d042e52ce62b9f566ba7e84f") format("woff"),
+		url("../iconfont/icons.ttf?afe1c826d042e52ce62b9f566ba7e84f") format("truetype"),
+		url("../iconfont/icons.svg?afe1c826d042e52ce62b9f566ba7e84f#icons") format("svg");
+    font-weight:normal;
+    font-style:normal;
+    font-display:swap;
+    }
+
+.icon {
+    font-family:"icons";
+    display:inline-block;
+    font-style:normal;
+    speak:none;
+    -webkit-font-smoothing:antialiased;
+    font-size:1em;
+    line-height:1em;
+    vertical-align:baseline;
+    }
+
+// Icons
+.icon--arrow-down:before { content:"\f101"; }
+.icon--arrow-next:before { content:"\f102"; }
+.icon--arrow-prev:before { content:"\f103"; }
+.icon--checkbox:before { content:"\f104"; }
+.icon--cross:before { content:"\f105"; }
+.icon--linkedin:before { content:"\f106"; }
+.icon--logo-jb:before { content:"\f107"; }
+.icon--mail:before { content:"\f108"; }
+.icon--phone:before { content:"\f109"; }
+.icon--star-empty:before { content:"\f10a"; }
+.icon--star:before { content:"\f10b"; }
+.icon--success:before { content:"\f10c"; }
+.icon--twitter:before { content:"\f10d"; }
+.icon--warning:before { content:"\f10e"; }

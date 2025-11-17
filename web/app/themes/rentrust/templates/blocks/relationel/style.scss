@@ -1,0 +1,59 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+RELATION COMPONENT
+------------------------------- */
+.cbo-relation{
+  &.relation--beige{
+    background: $colorbeige;
+    border-radius: $borderstandard;
+  }
+  .relation-head{
+    .relation-button{
+      margin-top: 1.875rem;
+    }
+  }
+  .relation-list{
+    margin: 2.5rem -0.625rem -0.625rem -0.625rem;
+
+    .slick-list{
+      width: 100%;
+    }
+    .slick-arrow{
+      &.slick-prev{
+        left: 0;
+      }
+      &.slick-next{
+        right: 0;
+      }
+    }
+    .list-el{
+      height: 100%;
+      margin: 0;
+      padding: 0.625rem;
+    }
+  }
+}
+
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width: $screen-md-min){
+  .cbo-relation{
+    &.relation--beige{
+      border-radius: $borderbig;
+    }
+    .relation-head{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .relation-button{
+        margin: 0 0 0 1.875rem;
+      }
+    }
+    .relation-list{
+      margin-top: 3.75rem;
+    }
+  }
+}

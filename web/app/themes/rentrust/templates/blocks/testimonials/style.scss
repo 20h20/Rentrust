@@ -1,0 +1,142 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+TESTIMONIALS COMPONENT
+------------------------------- */
+.cbo-testimonials{
+    background: $colorbeige;
+    border-radius: $borderstandard;
+
+    .testimonials-title{
+        margin-bottom: 3.125rem;
+    }
+    .testimonials-list{
+        margin: 0 -0.625rem;
+
+        &:not(.slick-slider){
+            display: flex;
+            flex-wrap: nowrap;
+            overflow: hidden;
+
+            .list-el{
+                width: 100%;
+                min-width: 100%;
+                height: auto;
+            }
+        }
+        .slick-arrow{
+            &.slick-next{
+                right: 0;
+            }
+            &.slick-prev{
+                left: 0;
+            }
+        }
+        .list-el{
+            padding: 0 0.625rem;
+            height: 100%;
+
+            .el-inner{
+                background: $colorwhite;
+                padding: 1.25rem 1.875rem;
+                border-radius: $bordersmall;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+
+                .stars--list{
+                    display: flex;
+                    margin-bottom: 1.25rem;
+
+                    .star{
+                        margin: 0 0.25rem 0 0;
+
+                        i{
+                            font-size: 1rem;
+                            color: $colored;
+                        }
+                    }
+                }
+                .el-content{
+                   margin-bottom: 3.125rem;
+                }
+                .el-infos{
+                    .infos-name{
+                        font-weight: bold;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* -------------------------------
+SMALL SCREENS
+------------------------------- */
+@media (min-width:$screen-sm-min) {
+    .cbo-testimonials{
+        .testimonials-list{
+            &:not(.slick-slider){
+                .list-el{
+                    width: 50%;
+                    min-width: 50%;
+                }
+            }
+            .slick-arrow{
+                &.slick-next{
+                    right: -0.9375rem;
+                }
+                &.slick-prev{
+                    left: -0.9375rem;
+                }
+            }
+        }
+    }
+}
+
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width:$screen-md-min) {
+    .cbo-testimonials{
+        border-radius: $borderbig;
+
+        .testimonials-list{
+            &:not(.slick-slider){
+                .list-el{
+                    width: 33.3333%;
+                    min-width: 33.3333%;
+                }
+            }
+        }
+    }
+}
+
+/* -------------------------------
+LARGE SCREENS
+------------------------------- */
+@media (min-width:$screen-lg-min) {
+    .cbo-testimonials{
+        .testimonials-list{
+            .slick-arrow{
+                &.slick-next{
+                    right: -2.8125rem;
+                }
+                &.slick-prev{
+                    left: -2.8125rem;
+                }
+            }
+            .list-el{
+                .el-inner{
+                    padding: 1.875rem 2.5rem;
+
+                    .el-content{
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+        }
+    }
+}

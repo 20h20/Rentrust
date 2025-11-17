@@ -1,0 +1,137 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+HERO PICTURE CALCULATOR COMPONENT
+------------------------------- */
+.cbo-herocalculator{
+    position: relative;
+    color: $colorwhite;
+
+    &:after{
+        content: '';
+        background-image:linear-gradient(250deg,$coloredlight,$colored 50%,$coloredark);
+        border-radius: 0 0 $borderstandard $borderstandard;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 7.5rem);
+    }
+    .herocalculator-inner.cbo-container{
+        z-index: 2;
+        padding-bottom: 0;
+    }
+    .herocalculator-picture{
+        padding-bottom: 70%;
+        border-radius: $borderstandard;
+        overflow: hidden;
+        margin-bottom: 1.875rem;
+
+        .picture-frame{
+            z-index: 2;
+            border-radius: $bordersmall;
+            width: calc(100% - 1.25rem);
+            height: calc(100% - 1.25rem);
+            position: absolute;
+            top: 0.625rem;
+            left: 0.625rem;
+            box-shadow: 0 0 0 0.0625rem $colorwhite inset;
+        }
+    }
+    .herocalculator-content{
+        .herocalculator-text{
+            margin-top: 1.875rem;
+        }
+        .herocalculator-form{
+            color: $colorbluedark;
+            background: $colorwhite;
+            border-radius: $borderstandard;
+            box-shadow: 0 0 0.625rem rgba(147,147,147, .2);
+            padding: 1.25rem;
+            margin-top: 2.5rem;
+
+            .form-title{
+                font-weight: bold;
+                margin-bottom: 1.875rem;
+            }
+            .form-field {
+                &.field--submit{
+                    text-align: center;
+
+                    .cbo-button{
+                        margin-top: 1.875rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* -------------------------------
+SMALL SCREENS
+------------------------------- */
+@media (min-width:$screen-sm-min) {
+    .cbo-herocalculator{
+        .herocalculator-content{
+            .herocalculator-form{
+                padding: 1.875rem;
+            }
+        }
+    }
+}
+
+/* -------------------------------
+MEDIUM SCREENS
+------------------------------- */
+@media (min-width:$screen-md-min) {
+    .cbo-herocalculator{
+        &:after{
+            border-radius: 0 0 $borderbig $borderbig;
+            height: 48.75rem;
+        }
+        .herocalculator-inner.cbo-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            margin-bottom: 8.75rem;
+        }
+        .herocalculator-picture{
+            padding-bottom: 0%;
+            width: 46%;
+            max-height: 40rem;
+        }
+        .herocalculator-content{
+            width: 50%;
+            max-width: 43.75rem;
+
+            .herocalculator-form{
+                max-width: 37.5rem;
+            }
+        }
+    }
+}
+/* -------------------------------
+LARGE SCREENS
+------------------------------- */
+@media (min-width:$screen-lg-min) {
+    .cbo-herocalculator{
+        position: relative;
+
+        .herocalculator-inner.cbo-container{
+            margin-bottom: 12.5rem;
+            position: initial;
+        }
+        .herocalculator-picture{
+            z-index: 2;
+            position: absolute;
+            right: 2.5rem;
+            top: 12.5rem;
+            height: calc(100% - 8.75rem);
+        }
+        .herocalculator-content{
+            margin: 0 auto 0 0;
+            z-index: 2;
+        }
+    }
+}

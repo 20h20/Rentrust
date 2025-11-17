@@ -1,0 +1,140 @@
+@import "../../../src/scss/partials/variables";
+
+/* -------------------------------
+TEXT PICTURE COMPONENT
+------------------------------- */
+.cbo-steps {
+  .steps-title{
+    text-align: center;
+  }
+  .steps-chapo{
+    text-align: center;
+    margin-top: 1.875rem;
+  }
+  .steps-list{
+    margin-top: 3.125rem;
+    position: relative;
+
+    .list-el{
+      margin: 1.25rem 0;
+
+      .el-inner{
+        background: $colorbeige;
+        border-radius: $borderstandard;
+        padding: 1.25rem;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+
+        .inner-top{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 1.25rem;
+
+          .inner-picture{
+            max-width: 5rem;
+            height: 5rem;
+
+            img{
+              position: relative;
+            }
+          }
+          .inner-number{
+            border-radius: 99rem;
+            background: $colored;
+            width: 2.75rem;
+            height: 2.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $colorwhite;
+            font-size: 1.25rem;
+            line-height: 1.25rem;
+            font-weight: 500;
+            padding-top: 0.25rem;
+          }
+        }
+        .inner-content{
+          .content-title {
+            margin-bottom: 0.625rem;
+          }
+        }
+      }
+    }
+  }
+
+  &.steps--beige{
+    background: $colorbeige;
+    border-radius: $borderstandard;
+
+    .steps-list {
+      .list-el{
+        .el-inner{
+          background: rgba($colorwhite, .6);
+          border: 0.0625rem solid rgba($colorwhite, .8);
+        }
+      }
+    }
+  }
+}
+/* -------------------------------
+SMALL SCREENS
+------------------------------- */
+@media (min-width: $screen-sm-min) {
+  .cbo-steps {
+    .steps-list{
+      display: flex;
+      justify-content: space-between;
+  
+      .list-el{
+        margin: 0 0.625rem;
+        width: 33.3333%;
+        text-align: center;
+
+        .el-inner{
+          padding: 1.25rem 0.625rem;
+
+          .inner-top{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            .inner-number{
+              margin: -2.625rem 0 1rem 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* -------------------------------
+LARGE SCREENS
+------------------------------- */
+@media (min-width: $screen-lg-min) {
+  .cbo-steps {
+    &.steps--beige{
+      border-radius: $borderbig;
+    }
+  }
+}
+
+/* -------------------------------
+LARGE SCREENS
+------------------------------- */
+@media (min-width: $screen-lg-min) {
+  .cbo-steps {
+    .steps-list{
+      margin-top: 4.375rem;
+
+      .list-el{
+        margin: 0 1.875rem;
+
+        .el-inner{
+          padding: 1.25rem 1.875rem 1.875rem 1.875rem;
+        }
+      }
+    }
+  }
+}
