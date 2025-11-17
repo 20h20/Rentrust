@@ -187,6 +187,41 @@
 
 
 	/* ************************* */
+	/* Pagination pour les articles : fait en sorte que la pagination amène bien sur la suite des articles */
+	/* ************************* */
+	if (!function_exists('setup_articles_pagination')) {
+		function setup_articles_pagination() {
+
+			$articles_page_id = get_option('page_for_posts');
+			if (!$articles_page_id) return;
+
+			$slug = get_post_field('post_name', $articles_page_id);
+			add_action('init', function() use ($slug) {
+				add_rewrite_rule(
+					"^$slug/page/([0-9]{1,})/?$",
+					'index.php?pagename=' . $slug . '&paged=$matches[1]',
+					'top'
+				);
+			});
+
+			add_action('pre_get_posts', function($query) use ($articles_page_id) {
+				if (is_admin() || !$query->is_main_query()) return;
+
+				if (($query->is_page() && $query->get('page_id') == $articles_page_id) || $query->is_home()) {
+					$paged = max(1, get_query_var('paged', 1));
+
+					$query->set('post_type', 'post');
+					$query->set('paged', $paged);
+					$query->is_page = false;
+					$query->is_home = true;
+				}
+			});
+		}
+		setup_articles_pagination();
+	}
+
+
+	/* ************************* */
 	// Register menu
 	/* ************************* */
 	function register_my_menu() {
