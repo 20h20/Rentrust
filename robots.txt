@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp-login.php/
+Disallow: /private/
+Disallow: /?s=*
+Allow: /public/
+
+Sitemap:
