@@ -1,4 +1,5 @@
 <?php
+
 	function bones_ahoy() {
 		require_once( 'library/inc/styles-import.php' );
 		require_once( 'library/inc/custom-cleanup.php' );
@@ -11,6 +12,7 @@
 	}
 	add_action( 'after_setup_theme', 'bones_ahoy' );
 
+	
 	/* ************************* */
 	// Pic size
 	/* ************************* */

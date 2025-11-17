@@ -352,7 +352,7 @@ if (!isset($GLOBALS['cbo_used_parts'])) {
 function cbo_register_part_usage($part_name) {
     if (!in_array($part_name, $GLOBALS['cbo_used_parts'])) {
         $GLOBALS['cbo_used_parts'][] = $part_name;
-        error_log("PART enregistrée : $part_name");
+        // error_log("PART enregistrée : $part_name");
     }
 }
 
@@ -472,12 +472,12 @@ add_action('wp_enqueue_scripts', function() {
     
         foreach ($cbo_used_parts as $part_name) {
             $css_file = $css_parts_path . $part_name . '.min.css';
-            error_log("Test du fichier CSS : " . $css_file);
+            // error_log("Test du fichier CSS : " . $css_file);
             if (file_exists($css_file)) {
                 echo '<link rel="stylesheet" href="' . $css_parts_url . $part_name . '.min.css?ver=' . filemtime($css_file) . '" />' . "\n";
-                error_log("PART CSS chargé : $part_name.min.css");
+                // error_log("PART CSS chargé : $part_name.min.css");
             } else {
-                error_log("PART CSS introuvable : $part_name.min.css");
+                // error_log("PART CSS introuvable : $part_name.min.css");
             }
         }
     }, 100);
