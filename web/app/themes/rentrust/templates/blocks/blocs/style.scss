@@ -4,7 +4,8 @@
 BLOCS SIMPLE COMPONENT
 ------------------------------- */
 .cbo-blocs{
-  background: $colorbeige;
+  background-image:linear-gradient(250deg,$coloredlight,$colored 50%,$coloredark);
+  color: $colorwhite;
   border-radius: $borderstandard;
   overflow: hidden;
   position: relative;
@@ -31,7 +32,7 @@ BLOCS SIMPLE COMPONENT
       margin: 2.5rem 0;
 
       .el-inner{
-        border-left: 0.0625rem solid rgba($colorbluedark, .4);
+        border-left: 0.0625rem solid rgba($colorwhite, .4);
         padding-left: 0.875rem;
 
         .inner-title{

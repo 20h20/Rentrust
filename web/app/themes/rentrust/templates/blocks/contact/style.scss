@@ -4,7 +4,7 @@
 CONTACT COMPONENT
 ------------------------------- */
 .cbo-contact{
-    background: $colorbeige;
+    background-image:linear-gradient(250deg,$coloredlight,$colored 50%,$coloredark);
     border-radius: 0 0 $borderstandard $borderstandard;
 
     .contact-form{

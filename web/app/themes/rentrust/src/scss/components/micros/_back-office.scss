@@ -67,6 +67,10 @@ BACK OFFICE COMPONENT
 					background-image:linear-gradient(250deg,$coloredlight,$colored 50%,$coloredark);
 				}
 			}
+			.cbo-contact{
+				background-image:linear-gradient(250deg,$coloredlight,$colored 50%,$coloredark);
+				border-radius: 0 0 $borderstandard $borderstandard;
+			}
 		}
 	}
 }

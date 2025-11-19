@@ -44,6 +44,10 @@ HERO ARTICLE COMPONENT
 		border-radius: $bordersmall;
 		overflow: hidden;
 		padding-bottom: 62%;
+
+		.parallax-image {
+            height: 120%;
+        }
 	}
 	.heroarticle-share{
 		margin-top: 1.875rem;

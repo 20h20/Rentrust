@@ -562,6 +562,44 @@ var Master = {
 			$('header .languages-switcher').on('click', function(){
 				$('.languages-switcher').toggleClass('active');
 			});
+			
+
+			//////////////// PICTURE HERO PARALLAX ////////////////
+			(function() {
+				var images = Array.prototype.slice.call(document.querySelectorAll('.parallax-image'));
+				if (!images.length) return;
+			
+				var lastScroll = window.pageYOffset || document.documentElement.scrollTop;
+				var ticking = false;
+				var speed = 0.2;
+
+				function update() {
+					var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+					images.forEach(function(img) {
+						var container = img.parentElement;
+						var containerTop = container.offsetTop;
+						var containerHeight = container.offsetHeight;
+						var relativeY = scrollTop - containerTop;
+						var translateY = relativeY * speed;
+						img.style.transform = 'translate(-0%, 0%) translateY(' + translateY + 'px)';
+					});
+			
+					ticking = false;
+				}
+
+				function onScroll() {
+					if (!ticking) {
+						ticking = true;
+						requestAnimationFrame(update);
+					}
+				}
+				window.addEventListener('scroll', onScroll, { passive: true });
+				window.addEventListener('resize', onScroll);
+				update();
+			})();
+
+			
 		},
 			
 		onload : function(){},

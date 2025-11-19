@@ -36,7 +36,7 @@
 			<div class="heroarticle-picture cbo-picture-cover slide-up">
 				<?php
 					if ( has_post_thumbnail() ) {
-						the_post_thumbnail('small', array('sizes' => '(max-width:320px) 145px, (max-width:425px) 220px, 500px', 'itemprop' => 'image'));
+						the_post_thumbnail('large', array('sizes' => '(max-width:320px) 145px, (max-width:425px) 220px, 500px', 'itemprop' => 'image', 'class' => 'parallax-image'));
 					} else {
 						echo '<img src="' . get_template_directory_uri() . '/library/img/logo-rentrust-white.svg" class="picture-default" alt="" itemprop="image">';
 					}

@@ -7,17 +7,17 @@
 <section class="cbo-herotextpicture">
 	<div class="herotextpicture-inner cbo-container container--nomargin container--padding">
 		<?php if($picture): ?>
-			<div class="herotextpicture-picture cbo-picture-cover slide-up">
+			<div class="herotextpicture-picture cbo-picture-cover parallax-container slide-up">
 				<div class="picture-frame"></div>
 				<img
 					src="<?php echo esc_url($picture['sizes']['xsmall']); ?>"
 					srcset="<?php echo esc_url($picture['sizes']['small']); ?> 320w,
-							<?php echo esc_url($picture['sizes']['large']); ?> 1024w"
+						<?php echo esc_url($picture['sizes']['large']); ?> 1024w"
 					sizes="100vw"
 					alt="<?php echo esc_attr($picture['alt'] ?: 'Illustration décorative'); ?>"
 					width="900"
 					height="900"
-					class=""
+					class="parallax-image"
 				>
 			</div>
 		<?php endif; ?>
