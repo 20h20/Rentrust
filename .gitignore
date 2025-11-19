@@ -10,6 +10,7 @@ web/app/advanced-cache.php
 web/app/ai1wm-backups
 web/app/autoptimize_404_handler.php
 web/app/cache/
+web/app/plugins/
 web/app/ewww/
 web/app/updraft/
 web/app/upgrade/

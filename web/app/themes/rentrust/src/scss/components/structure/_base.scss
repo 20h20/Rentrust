@@ -6,7 +6,6 @@ html {
 	}
 }
 body {
-	background: green;
 	&:not(.wp-admin){
 		color: $colorbluedark;
 		font-size: 1rem;
