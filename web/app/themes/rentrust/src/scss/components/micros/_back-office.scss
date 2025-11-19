@@ -48,7 +48,8 @@ BACK OFFICE COMPONENT
 				height: auto;
 			}
 			.cbo-blocs{
-				background: $colorbeige;
+				background-image:linear-gradient(250deg,$coloredlight,$colored 50%,$coloredark);
+				color: $colorwhite;
 				border-radius: 0 0 $borderbig $borderbig;
 			}
 			.cbo-textpicture .textpicture-picture{
