@@ -2,7 +2,7 @@
 FOOTER COMPONENT
 ------------------------------- */
 footer{
-   background: $colorbluedark;
+   background: $colored;
    color: $colorwhite;
    border-radius: $borderstandard $borderstandard 0 0;
 
@@ -59,7 +59,7 @@ footer{
 
                         .sub-menu{
                            margin: 1rem 0 1.875rem 0;
-                           opacity: .6;
+                           opacity: .7;
                            font-size: 0.875rem;
 
                            &:hover{
@@ -98,7 +98,7 @@ footer{
 
                .list-el{
                   box-shadow: 0 0 0 0 $colorwhite inset;
-                  color: $colorbluedark;
+                  color: $colored;
                   border-radius: 0.3125rem;
                   background: $colorwhite;
                   width: 2.25rem;
