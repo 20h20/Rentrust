@@ -5,8 +5,9 @@ ACCORDION SECTION COMPONENT
 ------------------------------- */
 .cbo-accordion{
 	&.accordion--beige{
-		background: $colorbeige;
+		background-image:linear-gradient(250deg,$coloredlight,$colored 50%,$coloredark);
 		border-radius: $borderstandard;
+		color: $colorwhite;
 	}
 
 	.accordion-title{
@@ -29,6 +30,7 @@ ACCORDION SECTION COMPONENT
  			display: flex;
 			align-items: center;
 			flex-wrap: wrap;
+			color: $colorbluedark;
 			transition: all .4s;
 
 			&:first-child{

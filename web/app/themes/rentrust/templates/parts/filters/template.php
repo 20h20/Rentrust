@@ -1,9 +1,9 @@
-<nav class="cbo-filters" aria-label="Filtrer les articles par catégorie">
+<nav class="cbo-filters" aria-label="<?php pll_e('Filtrer les articles par catégorie') ?>">
     <div class="filters-inner slide-up">
         <div class="filters-menu">
-            <span id="filter-label">Filtrer par :</span>
+            <span id="filter-label"><?php pll_e('Filtrer par :') ?></span>
         </div>
-        <ul class="filters-list" aria-labelledby="filter-label" itemscope itemtype="https://schema.org/SiteNavigationElement" aria-label="Filtrer les articles par catégorie">
+        <ul class="filters-list" aria-labelledby="filter-label" itemscope itemtype="https://schema.org/SiteNavigationElement" aria-label="<?php pll_e('Filtrer les articles par catégorie') ?>">
             <?php
                 $args = array(
                     'orderby' => 'name',
@@ -15,7 +15,7 @@
                 $all_articles_link = get_permalink(get_option('page_for_posts'));
 
                 echo '<li><a class="list-el ' . ($is_main_archive ? 'el--active' : '') . '" href="' . esc_url($all_articles_link) . '" itemprop="url">';
-                echo '<span class="el-inner">Tous les articles</span></a></li>';
+                echo '<span class="el-inner">' . pll_e('Tous les articles') . '</span></a></li>';
 
                 foreach ($cats as $cat) {
                     $active_class = ($current_cat_id == $cat->term_id) ? 'el--active' : '';

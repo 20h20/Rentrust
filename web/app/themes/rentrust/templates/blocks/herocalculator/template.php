@@ -3,7 +3,6 @@
 	$content	= get_field('herocalculator_content');
 	$picture	= get_field('herocalculator_picture');
 	$formtitle	= get_field('herocalculator_formtitle');
-	$button = get_field('herocalculator_button');
 ?>
 
 <section class="cbo-herocalculator">
@@ -60,15 +59,6 @@
 							endforeach;
 						endif;
 					?>
-					<?php if($button): ?>
-						<div class="form-field field--submit">
-							<div class="field-inner">
-								<a class="cbo-button" href="<?php echo esc_url($button['url']); ?>" target="<?php echo esc_attr($button['target'] ?: '_self'); ?>">
-									<?php echo esc_html($button['title']); ?>
-								</a>
-							</div>
-						</div>
-					<?php endif; ?>
 				</div>
 			</div>
 		</div>

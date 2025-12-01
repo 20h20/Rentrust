@@ -4,15 +4,22 @@
 TESTIMONIALS COMPONENT
 ------------------------------- */
 .cbo-testimonials{
-    background: $colorbeige;
+    background-image:linear-gradient(250deg,$coloredlight,$colored 50%,$coloredark);
     border-radius: $borderstandard;
 
     .testimonials-title{
         margin-bottom: 3.125rem;
+        color: $colorwhite;
     }
     .testimonials-list{
         margin: 0 -0.625rem;
-
+        
+        &.content-panel{
+            display: none !important;
+        }
+        &.panel--active {
+            display: flex !important;
+        }
         &:not(.slick-slider){
             display: flex;
             flex-wrap: nowrap;
@@ -23,6 +30,10 @@ TESTIMONIALS COMPONENT
                 min-width: 100%;
                 height: auto;
             }
+        }
+        .slick-list{
+            height: 100%;
+            width: 100%;
         }
         .slick-arrow{
             &.slick-next{

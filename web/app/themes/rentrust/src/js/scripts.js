@@ -508,8 +508,8 @@ var Master = {
 					var mensualite = loyer * 2;
 					var economieAnnuelle = loyer * 12;
 					result.innerHTML =
-						'À partir de <strong>' + mensualite.toFixed(2) + '€</strong> par mois<br>' +
-						'Économisez <strong>' + economieAnnuelle.toFixed(2) + '€</strong> par an';
+						'<div class="results-inner">À partir de <strong>' + mensualite.toFixed(2) + '€</strong> par mois<br>' +
+						'Économisez <strong>' + economieAnnuelle.toFixed(2) + '€</strong> par an</div>';
 				}
 				loyermens.addEventListener('input', updateCalc);
 			}
@@ -599,7 +599,7 @@ var Master = {
 				update();
 			})();
 
-			
+
 		},
 			
 		onload : function(){},

@@ -337,5 +337,8 @@
 
 		pll_register_string( 'header', "Navigation principale");
 		pll_register_string( 'header', "Ouvrir la navigation principale");
+
+		pll_register_string( 'header', "Filtrer les articles par catégorie");
+		pll_register_string( 'header', "Filtrer par :");
 	});
 ?>

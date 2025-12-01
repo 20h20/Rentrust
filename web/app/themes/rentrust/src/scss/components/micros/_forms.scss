@@ -52,6 +52,10 @@ FORMS & FIELDS
 	.form-results{
 		text-align: center;
 		width: 100%;
+
+		.results-inner{
+			margin-bottom: 20px;
+		}
 	}
 	.form-field{
 		margin-bottom: 1.25rem;
