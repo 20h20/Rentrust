@@ -5,8 +5,8 @@
 	$section_id = uniqid('accordion--');
 ?>
 
-<section class="cbo-accordion <?php echo ($color === 'beige') ? 'accordion--beige' : ''; ?>" itemscope itemtype="https://schema.org/FAQPage">
-	<div class="accordion-inner cbo-container container--small <?php echo ($color === 'beige') ? 'container--padding container--nomargin' : ''; ?>">
+<section class="cbo-accordion <?php echo ($color === 'red') ? 'accordion--red' : ''; ?>" itemscope itemtype="https://schema.org/FAQPage">
+	<div class="accordion-inner cbo-container container--small <?php echo ($color === 'red') ? 'container--padding container--nomargin' : ''; ?>">
 	
 		<?php if ($title): ?>
 			<div class="accordion-title cbo-title-1 slide-up">

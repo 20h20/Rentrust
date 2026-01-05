@@ -1,8 +1,8 @@
 
 <?php
 	$title	= get_field('table_title');
-  $tablehead	= get_field('table_addheader');
-  $tablefoot	= get_field('table_addfooter');  
+	$tablehead	= get_field('table_addheader');
+	$tablefoot	= get_field('table_addfooter');  
 ?>
 <section class="cbo-table">
 	<div class="table-inner cbo-container container--xsmall">

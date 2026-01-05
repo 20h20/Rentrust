@@ -5,8 +5,8 @@ Tags: GDPR, Cookie, Cookie Notice, Consent, Privacy
 Requires at least: 5.9
 License: GPL2
 Requires PHP: 7.4
-Tested up to: 6.8
-Stable tag: 7.4.3
+Tested up to: 6.9
+Stable tag: 7.4.4.1
 
 Configure your Cookie Banner, Cookie Consent and Cookie Policy with our Wizard and Cookies Scan.
 
@@ -198,6 +198,18 @@ The Brazilian General Data Protection Law is similar to the GDPR, the UK-GDPR it
 With some custom CSS this is possible, but we do not consider a cookie wall to be GDPR compliant, so it's not actively supported. We do, however, have the option to create a Soft Cookie Wall. Which blocks interaction with the website, but dismissing remains a possibility.
 
 == Changelog ==
+= 7.4.4.1 =
+* December 3rd, 2025
+* Improvement: Tested up to WordPress 6.9.
+* Fix: Updated integration with the WP Google Maps Plugin.
+
+= 7.4.4 =
+* November 18th, 2025
+* Feature: Microsoft Clarity Consent Mode V2 integration.
+* Fix: Old documentation links update.
+* Fix: Website Scan cleanup causing fatal error when license class unavailable.
+* Security update: Shortcode stored Cross-Site scripting.
+
 = 7.4.3 =
 * October 30th, 2025
 * Enhancement: Added `cmplz_prevent_get_shortcode_page_id` filter to allow developers to prevent execution of `get_shortcode_page_id`.

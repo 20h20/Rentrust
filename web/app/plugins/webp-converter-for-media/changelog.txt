@@ -1,5 +1,8 @@
 == Changelog ==
 
+= 6.3.2 (2025-11-24) =
+* `[Added]` Support for WordPress 6.9
+
 = 6.3.1 (2025-11-09) =
 * `[Fixed]` Support for Bunny CDN and BunnyCDN plugin
 * `[Fixed]` Support for QUIC.cloud CDN
